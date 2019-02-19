@@ -32,7 +32,7 @@
 
 .PHONY: build interact
 
-name:=$(shell basename $(CURDIR))
+name:=$(shell basename $(CURDIR) | cut -d'-' -f2-)
 version:=0.1
 tag:=$(name):v$(version)
 
